@@ -1,5 +1,4 @@
 # Aplikasi Kalkulator Sederhana
-
 Aplikasi Kalkulator Sederhana ini dibuat sebagai bagian dari Uji Kompetensi Keahlian (UKK) tahun ajaran 2024/2025 pada tanggal 25 Februari 2025. Aplikasi ini dirancang untuk membantu pengguna melakukan operasi perhitungan dasar dengan mudah.
 
 # Fitur Kalkulator
