@@ -33,7 +33,7 @@ Selamat datang di **Aplikasi Kalkulator Sederhana**! 🚀 Kalkulator ini dikemba
 ## 📖 CARA MENGGUNAKAN
 
 1️⃣ **Pastikan** Anda memiliki browser yang mendukung HTML, CSS, dan JavaScript.  
-2️⃣ **Buka** file `index.html` pada browser pilihan Anda.  
+2️⃣ **Buka** file `kalkulator.html` pada browser pilihan Anda.  
 3️⃣ **Gunakan** antarmuka kalkulator untuk melakukan perhitungan:  
    - Klik tombol angka untuk memasukkan angka.  
    - Klik tombol operator untuk melakukan operasi matematika.  
