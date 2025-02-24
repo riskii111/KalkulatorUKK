@@ -1,6 +1,6 @@
 # 🎉 APLIKASI KALKULATOR SEDERHANA 🎉
 
-Selamat datang di **Aplikasi Kalkulator Sederhana**! 🚀 Kalkulator ini dikembangkan sebagai bagian dari **Uji Kompetensi Keahlian (UKK) 2024/2025**, tepatnya pada tanggal **25 Februari 2025**. Dengan desain yang intuitif dan fungsionalitas yang mumpuni, aplikasi ini akan membantu Anda dalam melakukan perhitungan matematika dasar dengan **mudah, cepat, dan akurat**! 🧮
+Selamat datang di **Aplikasi Kalkulator Sederhana**! 🚀 Kalkulator ini dikembangkan sebagai bagian dari **Uji Kompetensi Keahlian (UKK) 2024/2025**, tepatnya pada tanggal **24 Februari 2025**. Dengan desain yang intuitif dan fungsionalitas yang mumpuni, aplikasi ini akan membantu Anda dalam melakukan perhitungan matematika dasar dengan **mudah, cepat, dan akurat**! 🧮
 
 ---
 ## HASIL 
