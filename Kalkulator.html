@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KALKULATOR RISKI</title>
+</head>
+<body>
+	<div class="container">
+		<h4 style="text-align: center; font-family: arial,sans-serif; font-weight: bold;">✨✌️KALKULATOR RISKI✌️✨</h4>
+		<input id="input" readonly>
+		<div class="button">
+			<button class="ac" onclick="hapuSemua()">ac</button>
+			<button class="del" onclick="hapuSigek()">&#9003;</button>
+			<button class="haphap" onclick="hasil()">=</button>
+			<button onclick="aritmatika('÷')">&divide;</button>
+
+			<button onclick="aritmatika('7')">7</button>
+			<button onclick="aritmatika('8')">8</button>
+			<button onclick="aritmatika('9')">9</button>
+			<button onclick="aritmatika('×')">&times;</button>
+
+			<button onclick="aritmatika('4')">4</button>
+			<button onclick="aritmatika('5')">5</button>
+			<button onclick="aritmatika('6')">6</button>
+			<button onclick="aritmatika('+')">+</button>
+
+			<button onclick="aritmatika('1')">1</button>
+			<button onclick="aritmatika('2')">2</button>
+			<button onclick="aritmatika('3')">3</button>
+			<button onclick="aritmatika('-')">-</button>
+
+			<button onclick="aritmatika('0')" style="grid-column: span 2;">0</button>
+			<button onclick="aritmatika('00')">00</button>
+			<button onclick="aritmatika('.')">.</button>
+		</div>
+	</div>
+<script type="text/javascript">
+	const input = document.getElementById("input");
+	let hasildisplay = false;
+	function aritmatika (mtk) {
+
+		if (input.value === "Error!") input.value =""; 
+		if (!input.value && /[÷×+]/.test(mtk)) return; 
+		input.value = hasildisplay && /\d/.test(mtk) ? mtk : input.value + mtk , hasildisplay = false; 		
+
+		input.scrollLeft = input.scrollWidth;
+	}
+	function hasil () {
+		if (!input.value) return; 		
+
+		try{
+			if (/[÷×+]{2,}/.test(input.value)) { 		
+				throw new Error();
+			}
+
+			let ubah = input.value.replaceAll("÷","/").replaceAll("×","*")
+			.replaceAll(/--/g, "- -");
+
+			let hasilakhir = eval(ubah);
+			input.value = hasilakhir;
+			if(input.value === "Infinity") { 
+				input.value = "Tidak Terbatas!";
+			}else {
+				input.value = hasilakhir;
+			}
+
+		} catch {
+			input.value =  "Error!";
+		}
+		hasildisplay = true;
+	}
+	function hapuSemua () {
+		input.value = input.value = "",  hasildisplay = false;
+	}
+	function hapuSigek () {
+		input.value = input.value === "Error!" ? "" : input.value.slice(0, -1), hasildisplay = false;		
+	}
+</script>
+<style type="text/css">
+	body {
+		background: lightblue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+	.container {
+		background-color: red;
+		max-width: 250px;
+		border: 2px solid;
+		padding: 0 20px 20px;
+		border-radius: 0 20px;
+		box-shadow: 10px 10px 5px rgba(0, 0, 0, 1.0);
+	}
+	input {
+		background-color: lightgrey;
+		border: 2px solid;
+		border-radius: 0 15px;
+		box-sizing: border-box;
+		width: 100%;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 1.0);
+		margin-bottom: 20px;
+		height: 50px;
+		outline: none;
+		text-align: right;
+		font-size: 30px;
+		padding: 10px;
+	}
+	.button {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	button {
+		font-weight: bold;
+		font-size: 25px;
+		border: 2px solid;
+		border-radius: 0 10px;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 1.0);
+		cursor: pointer;
+		transition: 0.35s;
+		background-color: darkcyan;
+	}
+	button:active {
+		transform: scale(1.1);
+	}
+	button.ac,.del {
+		background-color: darkorange;
+	}
+	button.haphap{
+		background-color: darkgreen;
+	}
+</style>
+</body>
+</html>
